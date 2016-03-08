@@ -1,0 +1,24 @@
+.left{float: left;}
+.right{float: right;}
+.clear{clear: both;}
+
+.container{
+    width: 990px;
+    margin: 0 auto;
+}
+
+.product-image{
+    width: 30%;
+}
+
+.product-infos{
+    width: 70%;
+}
+
+.product-infos .product-info-block{
+    margin-bottom: 10px;
+}
+
+.product-actions{
+    list-style-type: none;
+}

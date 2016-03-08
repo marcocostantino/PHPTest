@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div class="container">
+            <h1>Visualizza prodotto "{{ product.getName() }}"</h1>
+            <div class="container">
+                <div class="left product-image">
+                    <img width="90%" src="{{ asset('uploads/products/' ~ product.getImage()) }}" alt="Foto prodotto {{ product.getId() }}"></a>
+                </div>
+                <div class="left product-infos">
+                    <div class="product-info-block"><b>Descrizione:</b><br>{{ product.getDescription()|striptags|nl2br }}</div>
+                    <div class="product-info-block"><b>Tags:</b><br>{{ product.getTags()|striptags }}</div>
+                    <div class="product-info-block">
+                        <b>Creato il:</b> {{ product.getCreated()|date('d/m/Y') }}
+                        <b>alle ore:</b> {{ product.getCreated()|date('H:i:s') }}
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

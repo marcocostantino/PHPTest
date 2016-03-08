@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div class="container">
+            <h1>Crea nuovo prodotto</h1>
+            <div>
+                {{ form_start(form) }}
+                    {{ form_row(form.name) }}
+                    {{ form_row(form.description) }}
+                    {{ form_row(form.tags) }}
+                    {{ form_row(form.image) }}
+                    <button class="success" type="submit">Crea Prodotto</button>
+                    <div class="right">
+                        <a href="{{ path('product_list') }}" class="button">Torna indietro</a>
+                    </div>
+                    <div class="clear"></div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
